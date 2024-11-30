@@ -1,0 +1,1127 @@
+
+
+.hero {
+  display: flex;
+  flex-direction: column; /* Alinea elementos verticalmente */
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  text-align: center;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom right, #ffcccb, #ffe4e1);
+  max-width: 100%;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  color: #ff4d6d;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.2);
+  position: relative;
+  z-index: 1;
+}
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-heart {
+  position: absolute;
+  animation: float 20s linear infinite;
+  opacity: 0.3;
+  font-size: 1.5rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.2);
+}
+
+.heart-animation {
+  font-size: 5rem;
+  animation: heartbeat 1.5s infinite;
+  margin: 2rem 0;
+  color: #ff4d6d;
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  color: #ff4d6d;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.section-title::after {
+  content: "♥";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #ff4d6d;
+}
+
+/* Estilo General para la Sección de Fotos Especiales */
+.special-photos-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 1.5rem;
+  background: linear-gradient(135deg, #fff9fb 0%, #fef2f4 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid #e08ea4;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.section-title:hover {
+  color: #e08ea4;
+}
+
+.section-subtitle {
+  font-family: 'Lato', sans-serif;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: italic;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+/* Flexbox para la sección de fotos */
+.photos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrado de las fotos */
+  gap: 2rem;
+  padding: 2rem 0;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animación para el grid */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tarjetas de fotos */
+.photo-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(224, 142, 164, 0.1);
+  height: 100%;
+  max-width: 350px; /* Limitar el tamaño de las tarjetas */
+  width: 100%;
+}
+
+.photo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(224, 142, 164, 0.1);
+  border-color: #e08ea4;
+}
+
+/* Cabecera de la foto */
+.photo-header {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(224, 142, 164, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fef5f7;
+}
+
+.photo-title {
+  font-family: 'Playfair Display', serif;
+  color: #2c3e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.photo-title:hover {
+  color: #e08ea4;
+}
+
+.photo-date {
+  font-family: 'Lato', sans-serif;
+  color: #95a5a6;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Marco para la foto */
+.photo-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  overflow: hidden;
+  background: #fdf4f6;
+  border-bottom: 1px solid rgba(224, 142, 164, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.photo-frame2 {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  background: #fdf4f6;
+  border-bottom: 1px solid rgba(224, 142, 164, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.photo-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.95);
+}
+
+.photo-image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: brightness(0.95);
+}
+
+.photo-card:hover .photo-image {
+  transform: scale(1.02);
+  filter: brightness(1);
+}
+
+/* Overlay de la foto */
+.photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.05) 100%);
+  border-radius: 10px;
+}
+
+/* Subtítulo de la foto */
+.photo-caption {
+  padding: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  color: #34495e;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  flex-grow: 1;
+  background: linear-gradient(to bottom, #ffffff 0%, rgba(255, 249, 251, 0.3) 100%);
+}
+
+.photo-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(224, 142, 164, 0.1);
+  font-family: 'Playfair Display', serif;
+  color: #e08ea4;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+.photo-footer:hover {
+  color: #c06c84;
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+  .special-photos-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+  }
+
+  .photos-grid {
+    flex-direction: column; /* En móvil, se alinean en una sola columna */
+  }
+}
+
+@media (min-width: 1600px) {
+  .photos-grid {
+    flex-wrap: wrap;
+    justify-content: space-between; /* Alineación para pantallas grandes */
+  }
+}
+
+/* Mensajes de Amor Section */
+.love-messages {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 4rem;
+  background: linear-gradient(to bottom, #fff9fb, #fff);
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  color: #2c3e50;
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '♥';
+  display: block;
+  color: #e08ea4;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.section-subtitle {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.2rem;
+  margin: 0 0 3rem;
+  font-weight: 300;
+  font-style: italic;
+  letter-spacing: 0.5px;
+}
+
+.messages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.message-card {
+  background: #ffffff;
+  padding: 2.8rem 2.5rem;
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid #f0d4dc;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(224, 142, 164, 0.1);
+  border-color: #e08ea4;
+}
+
+.message-icon {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 0 15px;
+  color: #e08ea4;
+  font-size: 1.8rem;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-date {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: #95a5a6;
+  font-style: italic;
+}
+
+.message-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: #34495e;
+  text-align: left;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.message-text::before {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: rgba(224, 142, 164, 0.1);
+  position: absolute;
+  left: -1.2rem;
+  top: -1.5rem;
+  z-index: -1;
+}
+
+.message-text::after {
+  content: '"';
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: rgba(224, 142, 164, 0.1);
+  position: absolute;
+  right: -1rem;
+  bottom: -2.5rem;
+  z-index: -1;
+}
+
+.message-footer {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid #f5e6ea;
+  text-align: right;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #e08ea4;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .messages-container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .love-messages {
+    padding: 2rem 1rem;
+  }
+  
+  .messages-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .message-card {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (min-width: 2000px) {
+  .messages-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .section-title {
+    font-size: 4rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.4rem;
+  }
+}
+/* Contador Section */
+.counter-section {
+  background: linear-gradient(135deg, #ffb6c1, #ff4d6d);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 30px;
+  margin-top: 4rem;
+  box-shadow: 0 4px 15px rgba(255, 77, 109, 0.3);
+}
+
+.counter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.counter-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s;
+}
+
+.counter-item:hover {
+  transform: translateY(-5px);
+}
+
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.counter-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Footer */
+footer {
+  background: #ff4d6d;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.footer-heart {
+  animation: heartbeat 1.5s infinite;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .category {
+    margin: 1rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  background-color: #fff0f3;
+  color: #4a4a4a;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: rgba(255, 192, 203, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(255, 182, 193, 0.3);
+  padding: 0.8rem 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #ff4d6d;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #ff4d6d;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ff4d6d;
+  font-weight: 600;
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Hide navbar links on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(255, 192, 203, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.floating-heart {
+  position: absolute;
+  animation: float 20s linear infinite;
+  opacity: 0.3;
+  font-size: 1.5rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(255, 77, 109, 0.2);
+}
+
+.heart-animation {
+  font-size: 3rem;
+  animation: heartbeat 1.5s infinite;
+  margin: 2rem 0;
+  color: #ff4d6d;
+}
+
+/* Sections */
+section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  color: #ff4d6d;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Photo Categories */
+.photo-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.category {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Responsive Sizing */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .heart-animation {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .counter-number {
+    font-size: 2rem;
+  }
+
+  .counter-label {
+    font-size: 0.9rem;
+  }
+}
+
+.text-content {
+  flex: 1;
+  margin-right: 20px;
+  /* Espacio entre el texto y las imágenes */
+}
+
+.images-content {
+  display: flex;
+  flex-direction: column;
+  /* Cambia a columna para móviles */
+}
+
+.moment-image {
+  width: 100%;
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  margin-bottom: 10px;
+  /* Espacio entre imágenes */
+}
+
+@media (min-width: 768px) {
+  .moments-container {
+    flex-direction: row;
+    /* Vuelve a la fila en pantallas más grandes */
+  }
+
+  .text-content {
+    margin-right: 40px;
+    /* Aumenta el espacio en pantallas grandes */
+  }
+}
+
+/* Estilo general de las secciones */
+.sections-container {
+  display: flex;
+  /* Usar flexbox para alinear secciones */
+  flex-direction: column;
+  /* Colocar secciones en columna */
+  align-items: center;
+  /* Centrar horizontalmente */
+  justify-content: center;
+  /* Centrar verticalmente */
+  min-height: 100vh;
+  /* Asegurar que ocupe toda la altura de la pantalla */
+  padding: 20px;
+  /* Espaciado alrededor del contenedor */
+}
+
+.shared-memories-section,
+.future-plans-section {
+  background-color: #fff0f5;
+  /* Color de fondo suave */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  /* Bordes redondeados */
+}
+
+/* Estilo de los títulos de sección */
+.section-title {
+  font-size: 2em;
+  color: #b22222;
+  /* Color rojo romántico */
+  text-align: center;
+  /* Centrar el título */
+  margin-bottom: 15px;
+  /* Espacio debajo del título */
+}
+
+/* Estilo de la lista de recuerdos */
+.memories-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre las listas */
+  flex-wrap: wrap; /* Permitir que las listas se ajusten en pantallas pequeñas */
+  margin-top: 20px;
+  
+}
+
+
+@media (max-width: 400px) {
+  .memories-container {
+  display: contents ;
+
+  }
+}
+/* Estilo para cada lista (mantiene el estilo original) */
+.memories-list {
+  flex: 1; /* Ocupa el mismo espacio para ambas listas */
+  min-width: 250px; /* Ancho mínimo para cada lista */
+  max-width: 300px; /* Ancho máximo para mantener la proporción */
+  background: #fff;
+  color: #333;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+.memories-list li {
+  background: #fff;
+  /* Fondo blanco para cada recuerdo */
+  color: #333;
+  /* Color de texto oscuro */
+  padding: 10px 15px;
+  /* Espaciado interno */
+  margin: 10px 0;
+  /* Margen entre recuerdos */
+  border-left: 5px solid #b22222;
+  /* Línea lateral para estilo */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  transition: transform 0.3s;
+  /* Efecto de transición */
+}
+
+/* Efecto de hover para los recuerdos */
+.memories-list li:hover {
+  transform: translateY(-3px);
+  /* Levantar ligeramente al pasar el mouse */
+}
+
+/* Estilo del texto de significados */
+.plans-text {
+  font-size: 1.2em;
+  /* Tamaño de texto más grande */
+  line-height: 1.6;
+  /* Espaciado entre líneas */
+  color: #555;
+  /* Color gris para texto */
+  text-align: center;
+  /* Centrar el texto */
+  margin-top: 15px;
+  /* Espacio encima del texto */
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5em;
+    /* Tamaño más pequeño en móviles */
+  }
+
+  .plans-text {
+    font-size: 1em;
+    /* Texto más pequeño en móviles */
+    padding: 0 10px;
+    /* Espaciado adicional para móviles */
+  }
+
+  .memories-list li {
+    font-size: 0.9em;
+    /* Texto más pequeño en móviles */
+  }
+}
+
+.scroll-message {
+  text-align: center;
+  /* Centrar el texto */
+  font-size: 1.2em;
+  /* Tamaño del texto */
+  color: #b22222;
+  /* Color que combine con el tema */
+  margin-top: 20px;
+  /* Espaciado superior */
+  animation: fadeIn 1s;
+  /* Animación de aparición */
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .scroll-message {
+    font-size: 1em;
+    /* Tamaño más pequeño en móviles */
+  }
+}
+
+/* Animación de Fade-in (opcional) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.siguebajando {
+    margin: 50px;
+  font-weight: bold;
+  font-size: 1rem;
+  /* Tamaño del texto */
+  color: #3b0032;
+  /* Color del texto */
+  padding: 10px 20px;
+  /* Espaciado interno */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  text-align: center;
+}
+
+.love-message {
+  background-color: #ffebee;
+  /* Fondo suave */
+  padding: 2rem;
+  /* Espacio interno */
+  text-align: center;
+  /* Centrar texto */
+}
+
+/* Contenido del mensaje */
+.love-content h2 {
+  font-size: 2rem;
+  color: #d50000;
+  margin: 0;
+}
+.strikethrough {
+    text-decoration: line-through;
+    color: #ff002f;
+  }
+
+  /* Estilos para la lista de meses */
+.months-tracker {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.months-tracker h2 {
+    font-size: 1.5em;
+    color: #ed0505; /* Color rosa para mantener la temática romántica */
+    margin-bottom: 10px;
+}
+
+.months-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.month {
+    padding: 10px 15px;
+    border: 2px solid #ef4949; /* Color del borde */
+    border-radius: 8px;
+    font-size: 1em;
+    color: #ef4949;
+}
+
+.month.completed {
+    text-decoration: line-through;
+    background-color: #ef4949; /* Fondo rosa para los meses completados */
+    color: white;
+}
+
+.meaning-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* Contenedor dividido en dos columnas */
+.meaning-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 30px;
+    margin-top: 20px;
+    align-items: start;
+}
+
+/* Estilo de la primera y segunda sección */
+.meaning-text, .months-significance {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Títulos y párrafos dentro de cada sección */
+.meaning-text h3, .months-significance h3 {
+    margin-bottom: 10px;
+    color: #ff6f61; /* Color suave para los títulos */
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+    .meaning-content {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+    }
+}
+
+.download-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e86969;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.download-btn:hover {
+  background: #f89a9a;
+}
+
